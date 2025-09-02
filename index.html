@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio Profissional - Iago Rocha</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Poppins',sans-serif;background:#111;color:#fff;text-align:center;}
+  a{text-decoration:none;color:inherit;}
+  
+  header{padding:40px 20px; background:#111;}
+  header h1{display:flex;justify-content:center;align-items:center;gap:15px;font-size:2rem;}
+  header .logo{width:40px;animation:girar 6s linear infinite;}
+  header p{margin-top:10px;color:#ccc;font-size:0.95rem;}
+  .socials a{margin:0 10px;color:#ffcc00;font-weight:600;transition:0.3s;}
+  .socials a:hover{color:#fff;}
+
+  @keyframes girar{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+  section{padding:40px 20px;}
+  h2.section-title{font-size:1.8rem;margin-bottom:25px;position:relative;}
+  h2.section-title::after{content:'';width:80px;height:3px;background:#ffcc00;display:block;margin:10px auto 0;border-radius:3px;}
+
+  /* Grid cards */
+  .cards,.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;justify-items:center;}
+
+  .card,.skill-card,.project-card{
+    width:100%;max-width:250px;perspective:1000px;
+  }
+  .card-inner,.skill-inner,.project-inner{
+    position:relative;width:100%;height:250px;transition:transform 0.8s;transform-style:preserve-3d;border-radius:15px;
+  }
+  .card:hover .card-inner,.skill-card:hover .skill-inner,.project-card:hover .project-inner{
+    transform:rotateY(180deg);
+  }
+
+  .card-front,.card-back,
+  .skill-front,.skill-back,
+  .project-front,.project-back{
+    position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:15px;
+    display:flex;justify-content:center;align-items:center;flex-direction:column;padding:20px;
+    background:#1a1a1a;color:#fff;text-align:center;
+  }
+  .card-back,.skill-back,.project-back{transform:rotateY(180deg);background:#222;}
+
+  .card-front h3,.skill-front h3,.project-front h3{margin-bottom:10px;}
+  .card-front p,.card-back p,.skill-front p,.skill-back p,.project-front p,.project-back p{font-size:0.95rem;color:#ccc;}
+
+  .skill-card img,.project-card img{width:50px;margin-bottom:15px;}
+
+  .footer{padding:25px;color:#888;font-size:0.9rem;background:#111;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Meu Portfólio <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="logo"></h1>
+  <p>Futuro Programador • Apaixonado por Tecnologia • Cyber Segurança</p>
+  <div class="socials">
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">Informações Pessoais</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front"><h3>Nome</h3><p>Iago Santos Rocha</p></div>
+        <div class="card-back"><p>Futuro desenvolvedor apaixonado por tecnologia e inovação.</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front"><h3>Idade</h3><p>15 anos</p></div>
+        <div class="card-back"><p>Adoro aprender novas linguagens e frameworks.</p></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front"><h3>Escolaridade</h3><p>9º ano do Ensino Fundamental</p></div>
+        <div class="card-back"><p>Cursando Informática no SENAI.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <div class="skill-card">
+      <div class="skill-inner">
+        <div class="skill-front"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><h3>HTML</h3></div>
+        <div class="skill-back"><p>Estruturo páginas modernas e responsivas.</p></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-inner">
+        <div class="skill-front"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><h3>CSS</h3></div>
+        <div class="skill-back"><p>Crio estilos, animações e designs atraentes.</p></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-inner">
+        <div class="skill-front"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><h3>JavaScript</h3></div>
+        <div class="skill-back"><p>Interatividade e lógica dinâmica para web.</p></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-inner">
+        <div class="skill-front"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><h3>Python</h3></div>
+        <div class="skill-back"><p>Automação, APIs e backend.</p></div>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-inner">
+        <div class="skill-front"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"><h3>PHP</h3></div>
+        <div class="skill-back"><p>Backend dinâmico e bancos de dados.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>Desenvolvido por Iago Santos Rocha • Feito Por html e css</p>
+</div>
+
+</body>
+          </html>
